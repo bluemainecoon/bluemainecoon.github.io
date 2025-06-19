@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Maine Coon Cattery - Premium Maine Coon Kittens</title>
+    <link rel="stylesheet" href="includes/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Blue Maine Coon Cattery Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#kittens">Kittens</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Blue Maine Coon Cattery</h1>
+            <p>Maine Coon Kittens with Exceptional Pedigrees</p>
+            <a href="#kittens" class="cta-button">View Available Kittens</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-certificate"></i>
+            <h3>Health Guaranteed</h3>
+            <p>Health guarantee on all our kittens</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-home"></i>
+            <h3>Home Raised</h3>
+            <p>Kittens raised in our loving home environment</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-paw"></i>
+            <h3>Purebred</h3>
+            <p>100% purebred Maine Coon kittens</p>
+        </div>
+    </section>
+
+    <!-- Available Kittens Section -->
+    <section id="kittens" class="kittens">
+        <h2>Available Kittens</h2>
+        <div class="kitten-grid">
+             <!-- Gallery images -->
+             <div class="gallery-item">
+                <img src="images/gallery/AnkleBiter1.jpg" alt="Ankle Biter" class="thumbnail">
+                <p class="caption">Ankle Biter</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/AnkleBiter2.jpg" alt="Ankle Biter" class="thumbnail">
+                <p class="caption">Ankle Biter</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/Axel1.jpg" alt="Axel" class="thumbnail">
+                <p class="caption">Axel</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/Axel2.jpg" alt="Axel" class="thumbnail">
+                <p class="caption">Axel</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/Axel3.jpg" alt="Axel" class="thumbnail">
+                <p class="caption">Axel</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Our Cattery</h2>
+            <p>At Blue Maine Coon Cattery, we specialize in breeding exceptional Maine Coon cats with outstanding pedigrees. Our cats are raised with love and care, ensuring they develop into healthy, well-socialized companions.</p>
+            <div class="about-features">
+                <div class="about-feature">
+                    <h3>Our Mission</h3>
+                    <p>To breed healthy, well-tempered Maine Coon cats that bring joy to families worldwide.</p>
+                </div>
+                <div class="about-feature">
+                    <h3>Our Standards</h3>
+                    <p>We maintain the highest standards in breeding, health testing, and kitten care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery images -->
+            <div class="gallery-item">
+                <img src="images/gallery/Cercie1.jpg" alt="Cercie" class="thumbnail">
+                <p class="caption">Queen Cercie</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/Daxes0.jpg" alt="Daxes" class="thumbnail">
+                <p class="caption">Daxes</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/Daxes1.jpg" alt="Daxes" class="thumbnail">
+                <p class="caption">Daxes</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/Yara1.jpg" alt="Yara" class="thumbnail">
+                <p class="caption">Yara</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for full-size images -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us for Inquiries</h2>
+        <div class="contact-container">
+            <form id="contactForm" class="contact-form" onsubmit="return sendEmail(event)">
+                <hr />
+                <div class="form-group">
+                    <label for="name">Full Legal Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number">
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label>Preferred Contact Method:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+                        <label for="contactEmail">Email</label>
+                        
+                        <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                        <label for="contactPhone">Phone</label>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label>Preferred kitten sex:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        
+                        <input type="radio" id="noGenderPreference" name="gender" value="noGenderPreference">
+                        <label for="noGenderPreference">No preference</label>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label>Interested In:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="kitten" name="interests" value="kitten">
+                        <label for="kitten">Kitten Purchase</label>
+                        
+                        <input type="checkbox" id="breeding" name="interests" value="breeding">
+                        <label for="breeding">Breeding Information</label>
+                        
+                        <input type="checkbox" id="care" name="interests" value="care">
+                        <label for="care">Care Information</label>
+                    </div>
+                </div>
+                <hr />
+                 <div class="form-group">
+                    <label for="howSoon">How soon are you wanting to bring a kitten home? Or do you have your eye on one that's available now? If so which kitten? :</label>
+                    <br /><textarea id="howSoon" name="howSoon" rows="2" required></textarea>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="color">Color preference:</label>
+                    <br /><textarea id="color" name="color" rows="1" required></textarea>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="why">Why do you want a Maine Coon?</label>
+                    <br /><textarea id="why" name="why" rows="1" required></textarea>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="currentPets">What pets do you already have? Have they been fixed or not?</label>
+                    <br /><textarea id="currentPets" name="currentPets" rows="2" required></textarea>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label>Do you understand that the kitten will need to be sprayed/neutered by 9 months old if breeding rights are not purchased?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="neuter" name="neuter" value="Yes" checked>
+                        <label for="neuter">Yes</label>
+                        
+                        <input type="radio" id="neuter" name="neuter" value="No">
+                        <label for="neuter">No</label>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="currentVet">Name and phone number or current veterinarian:</label>
+                    <br /><textarea id="currentVet" name="currentVet" rows="3" required></textarea>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label>A $500 deposit is required to reserve a kitten. Deposit can be paid online. Balance is due in cash at pickup. The kittens will be able to leave at 12 weeks old. They will have their first and second vaccinations, parasite prevention and microchips. The kittens will have a one year health guarantee.
+If you choose to not pick a kitten from the current or next litter, your name will remain at the top of the waiting list.
+Do you understand that deposits are only refundable when not getting a kitten is no fault of your own?</label><br />
+                    <div class="radio-group">
+                        <input type="radio" id="deposit" name="deposit" value="Yes" checked>
+                        <label for="deposit">Yes</label>
+                        
+                        <input type="radio" id="deposit" name="deposit" value="No">
+                        <label for="deposit">No</label>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label>Prices start at $2500 for pet only and increases by $1500 if breeding rights are requested and approved. The extra $1500 will cover mentorship also.</label><br />
+                    <div class="radio-group">
+                        <input type="radio" id="prices" name="prices" value="Agree" checked>
+                        <label for="prices">Agree</label>
+                        
+                        <input type="radio" id="prices" name="prices" value="Disagree">
+                        <label for="prices">Disagree</label>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="hear">How did you hear about us?</label>
+                    <br /><textarea id="hear" name="hear" rows="1"></textarea>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="signature">Please type your name here as your signature</label>
+                    <br /><input type="text" id="signature" name="signature" required>
+                </div>
+                <hr />
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> (Tammy) 731-610-3626</p>
+                <p><i class="fas fa-envelope"></i> BlueMaineCoonCattery@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mt. Juliet, Tennessee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Blue Maine Coon Cattery</h3>
+                <p>Breeding excellence in Maine Coon cats</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#kittens">Kittens</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us on Facebook</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61576107691365" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blue Maine Coon Cattery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="includes/script.js"></script>
+    <script>
+        // Gallery functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        // Add click event to thumbnails
+        document.querySelectorAll('.thumbnail').forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                modalCaption.innerHTML = this.nextElementSibling.innerHTML;
+            }
+        });
+
+        // Close modal when clicking the X
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Contact form functionality
+        function sendEmail(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const contactMethod = document.querySelector('input[name="contactMethod"]:checked').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked'))
+                .map(checkbox => checkbox.value);
+            const howSoon = document.getElementById('howSoon').value;
+            const color = document.getElementById('color').value;
+            const why = document.getElementById('why').value;
+            const currentPets = document.getElementById('currentPets').value;
+            const neuter = document.querySelector('input[name="neuter"]:checked').value;
+            const currentVet = document.getElementById('currentVet').value;
+            const deposit = document.querySelector('input[name="deposit"]:checked').value;
+            const prices = document.querySelector('input[name="prices"]:checked').value;
+            const hear = document.getElementById('hear').value;
+            const signature = document.getElementById('signature').value;
+
+            // Format the email body
+            const emailBody = `
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Preferred Contact Method: ${contactMethod}
+Gender: ${gender}
+Interested In: ${interests.join(', ')}
+Timeframe: ${howSoon}
+Color: ${color}
+Reason for wanting a Maine Coon: ${why}
+Current Pets: ${currentPets}
+Current Pets neutered: ${neuter}
+Current Vet/Clinic: ${currentVet}
+Deposit refund understood: ${deposit}
+Feedback on pricing: ${prices}
+Referred by: ${hear}
+Signature: ${signature}
+            `;
+
+            // Create mailto link
+            const mailtoLink = `mailto:BlueMaineCoonCattery@gmail.com?subject=Contact Form Submission from ${name}&body=${encodeURIComponent(emailBody)}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Show success message
+            alert('Thank you for your message! Your email client will open with the pre-filled message. Please click send to complete the submission.');
+            
+            return false;
+        }
+    </script>
+</body>
+</html> 
