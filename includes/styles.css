@@ -148,6 +148,9 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
+    -ms-transform: scale(0.55,0.55); /* IE 9 */
+    -webkit-transform: scale(0.55,0.55); /* Safari */
+    transform: scale(0.55,0.55);
 }
 
 /* Gallery Section */
